@@ -12,7 +12,7 @@ $additional_fields = [
     'attribute_4' => array('type' => 'YN', 'css' => 'width_pct_25', 'size' => 64, 'step' => 2, 'fgroup' => '', 'field_code' => 'english_ind', 'optional' => false, 
             'title_ar' => 'إجادة اللغة الإنجليزية', 'title_en' => 'English language proficiency', 'help' => ''),
     'attribute_5' => array('type' => 'YN', 'css' => 'width_pct_25', 'size' => 64, 'step' => 2, 'fgroup' => '', 'field_code' => 'rayat_closed', 'optional' => false, 
-            'title_ar' => 'المقابلة الشخصية', 'title_en' => 'Interview', 'help' => ''),
+            'title_ar' => 'اجتياز المقابلة الشخصية', 'title_en' => 'Interview passed', 'help' => ''),
     /*        
     'attribute_6' => array('type' => 'TEXT','css' => 'width_pct_25', 'size' => 16, 'step' => 2, 'fgroup' => 'rayat', 'field_code' => 'rayat_closed_semester', 'optional' => false, 
             'title_ar' => 'الفصل التدريبي لطي القيد', 'title_en' => 'term File closed', 'help' => ''),
