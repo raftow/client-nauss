@@ -2,7 +2,7 @@
 /*
 class NaussApplicantFormulaManager
 {
-
+    
     
     public static function calcWeightedPercentage($applicantObj, $what="value")
     {
