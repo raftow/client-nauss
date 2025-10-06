@@ -25,6 +25,13 @@ $application_additional_fields = [
                             'title_ar' => 'المؤهل المتقدم به مستورد', 'title_en' => 'qualification imported', 
                             'category' => 'FORMULA',
                             'formula' => 'calcQualificationImported', ),
+
+
+    'attribute_5' => array('type' => 'INT', 'css' => 'width_pct_25', 'size' => 64, 'step' => 1, 
+                            'field_code' => 'qualification_grade', 'optional' => false, 'readonly' =>true,
+                            'title_ar' => 'تقدير المؤهل', 'title_en' => 'qualification grade', 
+                            'category' => 'FORMULA',
+                            'formula' => 'calcQualificationGrade', ),
                             
     
 ];

@@ -85,6 +85,29 @@ class NaussApplicationFormulaManager
         }
     }
 
+    public static function calcQualificationGrade($applicationObj, $what="value")
+    {
+        try
+        {
+            $qualifObj = $applicationObj->het("applicant_qualification_id"); 
+            if($qualifObj)
+            {
+                $level = $qualifObj->calcGrade();
+            }
+            else $level = 0;
+
+            return $level;
+        }
+        catch(Exception $e)
+        {
+            return -1;
+        }
+        catch(Error $e)
+        {
+            return -2;
+        }
+    }
+
     public static function calcQualificationLevel($applicationObj, $what="value")
     {
         try
