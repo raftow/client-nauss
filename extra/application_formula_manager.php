@@ -92,11 +92,11 @@ class NaussApplicationFormulaManager
             $qualifObj = $applicationObj->het("applicant_qualification_id"); 
             if($qualifObj)
             {
-                $level = $qualifObj->calcGrade();
+                $grade = $qualifObj->calc("grading_scale_id.level");
             }
-            else $level = 0;
+            else $grade = 0;
 
-            return $level;
+            return $grade;
         }
         catch(Exception $e)
         {
