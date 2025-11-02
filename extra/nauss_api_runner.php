@@ -1,6 +1,11 @@
 <?php
 class NaussApiRunner {
 
+    public static function applicant_apis()
+    {
+        return [];
+    }
+
     public static function register_apis()
     {
         return [];
