@@ -14,7 +14,7 @@ $application_additional_fields = [
                             'category' => 'FORMULA',
                             'formula' => 'calcQualificationAge', ),
 
-    'attribute_3' => array('type' => 'INT', 'css' => 'width_pct_25', 'size' => 64, 'step' => 1, 
+    'attribute_3' => array('type' => 'ENUM', 'css' => 'width_pct_25', 'size' => 64, 'step' => 1, 
                             'field_code' => 'qualification_level', 'optional' => false, 'readonly' =>true,
                             'title_ar' => 'مستوى المؤهل', 'title_en' => 'qualification age', 
                             'category' => 'FORMULA',
@@ -27,7 +27,7 @@ $application_additional_fields = [
                             'formula' => 'calcQualificationImported', ),
 
 
-    'attribute_5' => array('type' => 'INT', 'css' => 'width_pct_25', 'size' => 64, 'step' => 1, 
+    'attribute_5' => array('type' => 'ENUM', 'css' => 'width_pct_25', 'size' => 64, 'step' => 1, 
                             'field_code' => 'qualification_grade', 'optional' => false, 'readonly' =>true,
                             'title_ar' => 'تقدير المؤهل', 'title_en' => 'qualification grade', 
                             'category' => 'FORMULA',
