@@ -89,14 +89,20 @@ class NaussApplicationFormulaManager
     {
         try
         {
+            $lang = AfwLanguageHelper::getGlobalLanguage();
             $qualifObj = $applicationObj->het("applicant_qualification_id"); 
             if($qualifObj)
             {
                 $grade = $qualifObj->calc("grading_scale_id.level");
+                $grade_decoded = $qualifObj->calc("grading_scale_id.value_$lang");
             }
-            else $grade = 0;
+            else
+            {
+                $grade = 0;
+                $grade_decoded = "";
+            } 
 
-            return $grade;
+            return ($what=="value") ? $grade : $grade_decoded;
         }
         catch(Exception $e)
         {
