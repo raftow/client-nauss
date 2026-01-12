@@ -20,3 +20,8 @@ $lookup[5] = [
     'ar' => 'مرشح – منحة الأمير نايف',
     'en' => 'Candidate - Prince Nayef Scholarship',
 ];
+
+$lookup[6] = [
+    'ar' => 'مرشح – غير محدد التمويل',
+    'en' => 'Candidate - Unspecified funding',
+];
