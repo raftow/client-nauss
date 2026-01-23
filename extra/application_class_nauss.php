@@ -40,6 +40,7 @@ class ApplicationClassNauss
 
     public static function calcApplicationClassOf($applicationObj, $desireObj)
     {
+        if (!$applicationObj) return 1;
         $ncObj = $applicationObj->calcNominatingCandidate("object");
         if (!$ncObj) {
             return 1;
