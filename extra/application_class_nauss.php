@@ -38,7 +38,7 @@ class ApplicationClassNauss
      * @param ApplicationDesire $desireObj
      */
 
-    public function calcApplicationClassOf($applicationObj, $desireObj)
+    public static function calcApplicationClassOf($applicationObj, $desireObj)
     {
         $ncObj = $applicationObj->calcNominatingCandidate("object");
         if (!$ncObj) {
