@@ -46,16 +46,18 @@ class NaussWorkflowManager
     }
 
 
-    public static function getOriginalFieldLabel($field_order)
+    public static function getOriginalFieldLabel($field_order, $lang, $short)
     {
-        if ($field_order == 1) return "qualification_id";
-        if ($field_order == 2) return "major_category_id";
-        if ($field_order == 3) return "qualification_major_id";
-        if ($field_order == 4) return "gpa";
-        if ($field_order == 5) return "gpa_from";
-        if ($field_order == 6) return "grading_scale_id";
-        if ($field_order == 7) return "source_name";
+        if ($field_order == 1) $attribute = "qualification_id";
+        if ($field_order == 2) $attribute = "major_category_id";
+        if ($field_order == 3) $attribute = "qualification_major_id";
+        if ($field_order == 4) $attribute = "gpa";
+        if ($field_order == 5) $attribute = "gpa_from";
+        if ($field_order == 6) $attribute = "grading_scale_id";
+        if ($field_order == 7) $attribute = "source_name";
 
-        return "unknown field order $field_order";
+        $attribute = "unknownOrd$field_order";
+        $obj = new ApplicantQualification();
+        return AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
     }
 }
