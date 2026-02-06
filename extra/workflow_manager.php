@@ -49,14 +49,13 @@ class NaussWorkflowManager
     public static function getOriginalFieldLabel($field_order, $lang, $short)
     {
         if ($field_order == 1) $attribute = "qualification_id";
-        if ($field_order == 2) $attribute = "major_category_id";
-        if ($field_order == 3) $attribute = "qualification_major_id";
-        if ($field_order == 4) $attribute = "gpa";
-        if ($field_order == 5) $attribute = "gpa_from";
-        if ($field_order == 6) $attribute = "grading_scale_id";
-        if ($field_order == 7) $attribute = "source_name";
-
-        $attribute = "unknownOrd$field_order";
+        elseif ($field_order == 2) $attribute = "major_category_id";
+        elseif ($field_order == 3) $attribute = "qualification_major_id";
+        elseif ($field_order == 4) $attribute = "gpa";
+        elseif ($field_order == 5) $attribute = "gpa_from";
+        elseif ($field_order == 6) $attribute = "grading_scale_id";
+        elseif ($field_order == 7) $attribute = "source_name";
+        else $attribute = "unknownOrd$field_order";
         $obj = new ApplicantQualification();
         return AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
     }
