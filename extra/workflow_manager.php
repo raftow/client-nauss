@@ -55,5 +55,7 @@ class NaussWorkflowManager
         if ($field_order == 5) return "gpa_from";
         if ($field_order == 6) return "grading_scale_id";
         if ($field_order == 7) return "source_name";
+
+        return "unknown field order $field_order";
     }
 }
