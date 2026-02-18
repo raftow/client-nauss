@@ -28,7 +28,7 @@ class NaussWorkflowManager
 
     public static function nbFields()
     {
-        return 7;
+        return 8;
     }
 
     public static function originalField($field_order)
@@ -37,10 +37,10 @@ class NaussWorkflowManager
         if ($field_order == 2) return "originalObject.applicant_qualification_id.major_category_id";
         if ($field_order == 3) return "originalObject.applicant_qualification_id.qualification_major_id";
         if ($field_order == 4) return "originalObject.applicant_qualification_id.gpa";
-        if ($field_order == 5) return "originalObject.applicant_qualification_id.gpa_from";
+        if ($field_order == 5) return "originalObject.applicant_qualification_id.study_type_id";
         if ($field_order == 6) return "originalObject.applicant_qualification_id.grading_scale_id";
         if ($field_order == 7) return "originalObject.applicant_qualification_id.university";
-        // if ($field_order == 8) return "originalObject.applicant_qualification_id.gpa";
+        if ($field_order == 8) return "originalObject.applicant_id.aptitude_university";
         // if ($field_order == 9) return "originalObject.applicant_qualification_id.gpa";
         // if ($field_order == 10) return "originalObject.applicant_qualification_id.gpa";
     }
@@ -52,9 +52,10 @@ class NaussWorkflowManager
         elseif ($field_order == 2) $attribute = "major_category_id";
         elseif ($field_order == 3) $attribute = "qualification_major_id";
         elseif ($field_order == 4) $attribute = "gpa";
-        elseif ($field_order == 5) $attribute = "gpa_from";
+        elseif ($field_order == 5) $attribute = "study_type_id";
         elseif ($field_order == 6) $attribute = "grading_scale_id";
         elseif ($field_order == 7) $attribute = "university";
+        elseif ($field_order == 8) $attribute = "aptitude_university";
         else $attribute = "unknownOrd$field_order";
         $obj = new ApplicantQualification();
         return AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
