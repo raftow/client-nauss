@@ -63,5 +63,7 @@ class NaussWorkflowManager
             $obj = new ApplicantQualification();
             $return = AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
         }
+
+        return $return;
     }
 }
