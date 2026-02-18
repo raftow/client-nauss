@@ -57,7 +57,11 @@ class NaussWorkflowManager
         elseif ($field_order == 7) $attribute = "university";
         elseif ($field_order == 8) $attribute = "aptitude_university";
         else $attribute = "unknownOrd$field_order";
-        $obj = new ApplicantQualification();
-        return AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
+        $obj = new WorkflowRequest();
+        $return = AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
+        if (!$return or ($return == $attribute)) {
+            $obj = new ApplicantQualification();
+            $return = AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
+        }
     }
 }
