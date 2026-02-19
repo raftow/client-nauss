@@ -45,6 +45,19 @@ class NaussWorkflowManager
         // if ($field_order == 10) return "originalObject.applicant_qualification_id.gpa";
     }
 
+    public static function originalFieldCategory($field_order)
+    {
+        if ($field_order == 1) return "";
+        if ($field_order == 2) return "";
+        if ($field_order == 3) return "";
+        if ($field_order == 4) return "";
+        if ($field_order == 5) return "";
+        if ($field_order == 6) return "";
+        if ($field_order == 7) return "";
+        if ($field_order == 8) return "";
+        if ($field_order == 9) return ".FORMULA.";
+    }
+
 
     public static function getOriginalFieldLabel($field_order, $lang, $short)
     {
