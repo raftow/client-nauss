@@ -41,7 +41,7 @@ class NaussWorkflowManager
         if ($field_order == 6) return "originalObject.applicant_qualification_id.grading_scale_id";
         if ($field_order == 7) return "originalObject.applicant_qualification_id.university";
         if ($field_order == 8) return "originalObject.applicant_id.aptitude_university";
-        if ($field_order == 9) return "originalObject.myApplicationCvScore.total_score";
+        if ($field_order == 9) return "originalObject.cv_score";
         // if ($field_order == 10) return "originalObject.applicant_qualification_id.gpa";
     }
 
@@ -55,7 +55,7 @@ class NaussWorkflowManager
         if ($field_order == 6) return "";
         if ($field_order == 7) return "";
         if ($field_order == 8) return "";
-        if ($field_order == 9) return ".FORMULA.";
+        if ($field_order == 9) return ".FORMULA";
     }
 
 
