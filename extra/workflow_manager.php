@@ -41,7 +41,7 @@ class NaussWorkflowManager
         if ($field_order == 6) return "originalObject.applicant_qualification_id.grading_scale_id";
         if ($field_order == 7) return "originalObject.applicant_qualification_id.university";
         if ($field_order == 8) return "originalObject.applicant_id.aptitude_university";
-        // if ($field_order == 9) return "originalObject.applicant_qualification_id.gpa";
+        if ($field_order == 9) return "originalObject.myApplicationCvScore.total_score";
         // if ($field_order == 10) return "originalObject.applicant_qualification_id.gpa";
     }
 
@@ -56,6 +56,7 @@ class NaussWorkflowManager
         elseif ($field_order == 6) $attribute = "grading_scale_id";
         elseif ($field_order == 7) $attribute = "university";
         elseif ($field_order == 8) $attribute = "aptitude_university";
+        elseif ($field_order == 9) $attribute = "cv_score";
         else $attribute = "unknownOrd$field_order";
         $obj = new WorkflowRequest();
         $return = AfwLanguageHelper::getAttributeTranslation($obj, $attribute, $lang, $short);
