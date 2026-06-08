@@ -13,13 +13,13 @@
                 $api_url_list[] = AfwSession::config('hrm_get_employee_api_1', 'API-1-NOT-DEFINED');
                 $api_url_list[] = AfwSession::config('hrm_get_employee_api_2', 'API-2-NOT-DEFINED');
                 $api_url_list[] = AfwSession::config('hrm_get_employee_api_3', 'API-3-NOT-DEFINED');
-                $file_dir_name = dirname(__FILE__);
+                // $file_dir_name = dirname(__FILE__);
 
                 $resEmployee = [];
-                require_once("$file_dir_name/../lib/afw/afw_web_service_api.php");
+                // require_once("$file_dir_name/../lib/afw/afw_web_service_api.php");
                 foreach($api_url_list as $api_url)
                 {
-                        $resEmployee = getDataFromAPIUrl($api_url, $data);
+                        $resEmployee = AfwApiConsumeHelper::getDataFromAPIUrl($api_url, $data);
                         if($resEmployee['login']) break;
                 }
                 
